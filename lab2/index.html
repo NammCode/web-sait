@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab 2</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/lab2.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <a name="topOfPage"></a>
+    <!-- This is the header -->
+    <header>
+        <div>
+            <img src="assets/images/spring_logo.png" alt="Spring Logo" title="My Logo">
+        </div>
+        <h1>Nam's Web Page</h1>
+    </header>
+
+    <h2>About Me</h2>
+    <!-- About me Section -->
+    <article>
+        <div>
+            <h3>My Hometown</h3>
+            <h4>Ha Noi</h4>
+        </div>
+        <div>
+            <h3>Favourite Food</h3>
+            <h4>Humberger Chicken, Pizza, Beef</h4>
+        </div>
+        <div>
+            <h3>Favourite Quotations</h3>
+            <h4>By failing to prepare, you are preparing to fail</h4>
+        </div>
+        <div>
+            <h3>Future Goals</h3>
+            <h4>Get Web Developer Job</h4>
+        </div>
+        <div>
+            <h3>Some picture that I like</h3>
+            <img src="assets/images/bike.jpg" alt="Bike" title="Bike">
+            <img src="assets/images/piano.jpg" alt="Bike" title="Bike">
+            <img src="assets/images/coding.jpg" alt="Bike" title="Bike">
+        </div>
+    </article>
+
+    <!-- This is a table about course information -->
+    <h2>My Course</h2>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Course ID</th>
+            <th>Course Description</th>
+            <th>Instructor Name</th>
+            <th>Hours Per Week</th>
+        </tr>
+
+        <tr>
+            <td>Interface Design</td>
+            <td>CMPS-253-SDA</td>
+            <td>Learn process of design</td>
+            <td>Kody Dillman</td>
+            <td>8</td>
+        </tr>
+
+        <tr>
+            <td>Database Design & Programming</td>
+            <td>CPRG-250-SDA</td>
+            <td>Learn how to use & design database</td>
+            <td>Mohamed ElMenshawy</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Obj.-Oriented Prog. Essentials</td>
+            <td>CPRG-251-SDA</td>
+            <td>Learn how to build Java application</td>
+            <td>Khosro Salmani</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Website Development Fundament</td>
+            <td>CPRG-256-SDA</td>
+            <td>Learn how to build basic website!</td>
+            <td>Derek Yadlowski</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Business Dynamics</td>
+            <td>HREL-250-AB</td>
+            <td>Learn how to write technical document</td>
+            <td>Achala Vinnakota</td>
+            <td>6</td>
+        </tr>
+
+    </table>
+
+    <!-- Work Experience -->
+    <h2>Work Experience</h2>
+    <section>
+
+        <div>
+            <h3>Education</h3>
+            <h4>Bachelor in Viet Nam</h4>
+        </div>
+
+        <div>
+            <h3>Programming Skill</h3>
+            <h4>Java</h4>
+        </div>
+
+        <div>
+            <h3>Working Experience</h3>
+            <h4>Have a small business which sell milk tea</h4>
+        </div>
+
+    </section>
+
+    <!-- Contact me form -->
+    <h2>Contact Form</h2>
+    <form action="personal@sait.ca" method="POST">
+        <h2>Contact Me</h2>
+        <div>
+            <label for="msgSubject">Message Subject: </label>
+            <input type="text" name="msgSubject">
+        </div>
+
+        <div>
+            <label for="msgType">Message Type: </label>
+            <select name="msgType" id="msgType">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+            </select>
+        </div>
+
+        <div>
+            <div>
+                <label for="msgContent">Message: </label>
+            </div>
+            <textarea name="msgContents" id=""></textarea>
+        </div>
+
+        <div>
+            <input type="submit" name="Submit" value="Submit Form">
+            <input type="reset" name="reset" value="Clear Form">
+        </div>
+
+    </form>
+
+    <div>
+        <a href="#topOfPage">Back to Top</a>
+    </div>
+
+</body>
+
+</html>

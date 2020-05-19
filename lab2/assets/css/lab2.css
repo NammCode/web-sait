@@ -1,0 +1,118 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    color: saddlebrown;
+}
+
+header {
+    display: block;
+    background-color: white;
+    padding: 20px;
+}
+
+header div {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+header div img {
+    display: block;
+    width: 100%;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    left: 20%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+}
+
+article {
+    margin: 20px 50px;
+}
+
+article h3 {
+    color: royalblue;
+}
+
+article h4, img {
+    margin-left: 25px;
+}
+
+article div {
+    width: 300px;
+    height: auto;
+}
+
+article img {
+    display: inline-block;
+    width: 100%;
+}
+
+table {
+    background-color: white;
+    border: 1px black solid;
+    margin: 20px 50px;
+    border-collapse: collapse; 
+}
+
+table tr th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+table tr td, th {
+    padding: 5px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+}
+
+section {
+    margin: 20px 50px;
+}
+
+section h3 {
+    color: royalblue;
+}
+
+section h4, img {
+    margin-left: 25px;
+}
+
+form {
+    background-color: orange;
+    margin: 20px auto;
+    border: 1px #ccc solid;
+    width: 350px;
+    height: 290px;
+    border-radius: 50%;
+    padding-top: 60px;
+}
+
+form h2 {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    text-align: center;
+}
+
+form input, select, textarea {
+    display: block;
+    margin: 0 auto;
+}
+
+form textarea {
+    width: 100px;
+    height: 30px;
+}
