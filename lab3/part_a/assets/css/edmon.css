@@ -1,0 +1,65 @@
+body {
+    background-image: url('../images/map.jpg');
+    background-size: 100% auto;
+}
+
+div.wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    top: 40px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    border: 2px solid #333333;
+}
+
+div.wrapper h1 {
+    text-align: center;
+}
+
+
+/* Never mind */
+p::first-letter {
+    color: crimson;
+    font-size: 40px;
+    float: left;
+    line-height: 30px;
+}
+
+figure {
+    width: 200px;
+    margin: 0 0 20px 0;
+}
+
+figure.wrap-left {
+    margin-right: 20px;
+    float: left;
+}
+
+figure.wrap-right {
+    margin-left: 20px;
+    float: right;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+}
+
+footer {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    background-color: darkseagreen;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+footer a:hover { 
+    background-color: darkgreen;
+    font-size: 25px;
+}
