@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Hotels - Registration Form</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <img class="bg-image" src="assets/images/hotel.jpg" alt="New Hotels">
+
+        <header>
+            <img src="assets/images/hotel-banner.jpg" alt="Hotel Banners">
+            <h1>Hew Hotels</h1>
+            <nav>
+                Links
+            </nav>
+        </header>
+
+        <form action="mailto:registration@newhotels.net" method="POST">
+
+            <h2>Registration Form</h2>
+
+            <div>
+                <label for="regName">Full Name:</label>
+                <input type="text" name="regName" pattern="[A-Za-z]{5}">
+            </div>
+
+            <div class="address-section">
+                <label for="regAddress1">Address Line 1: </label>
+                <input type="text" name="regAddress1">
+                <label for="regAddress2">Address Line 2: </label>
+                <input type="text" name="regAddress2">
+                <label for="regCity">City: </label>
+                <input type="text" name="regCity">
+                <label for="regProvince">Province: </label>
+                <input type="text" name="regProvince">
+                <label for="regCountry">Country: </label>
+                <input type="text" name="regCountry" value="Canada" disabled="true">
+                <label for="regPostalCode">Postal Code: </label>
+                <input type="text" name="regPostalCode">
+            </div>
+
+            <div>
+                <label for="regPhone">Telephone Number</label>
+                <input type="tel" name="regPhone">
+            </div>
+
+            <div>
+                <label for="regAge">Age: </label>
+                <input type="number" name="regAge">
+            </div>
+
+            <div>
+                <label for="regEmail">Email: </label>
+                <input type="email" name="regEmail" placeholder="example@email.com">
+            </div>
+
+            <div>
+                <label for="regDate">Registration Date</label>
+                <input type="date" name="regDate">
+            </div>
+
+            <div class="button-bar">
+                <input type="submit" name="submit" value="Submit Form">
+                <input type="reset" name="reset" value="Clear Form">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

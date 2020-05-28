@@ -24,6 +24,7 @@ p::first-letter {
     font-size: 40px;
     float: left;
     line-height: 30px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 figure {

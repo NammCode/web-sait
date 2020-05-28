@@ -1,0 +1,84 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+div.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+div.wrapper img.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 100px;
+}
+
+header h1 {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+
+header img {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+form {
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgba(178, 158, 204, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+form h2 {
+    margin: 0;
+}
+
+form div {
+    padding: 20px 0;
+}
+
+form div label {
+    display: block;
+}
+
+form div input {
+    width: 300px;
+}
+
+form div.address-section input {
+    margin-bottom: 5px;
+}
+
+form div.button-bar input {
+    width: 100px;
+}
