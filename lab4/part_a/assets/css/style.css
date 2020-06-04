@@ -1,0 +1,198 @@
+/* Styles for the border box model (optional) */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Reset Styles */
+
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* Shared Styles */
+
+header, footer {
+	background-color: #333333;
+	color: white;
+	padding: 20px;
+}
+
+h1, h2 {
+	margin: 0;
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+}
+
+h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+/* Header Styles */
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-size: 50px;
+}
+
+/* Container Styles */
+
+.container {
+	position: relative;
+	width: 85%;
+	margin-top: 30px;
+	margin-right: 5%;
+	margin-bottom: 40px;
+	margin-left: 10%;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Article Styles */
+
+.container article {
+	position: relative;
+	float: left;
+	width: 70%;
+	margin: 0 5% 0 0;
+	column-count: 2;
+	column-gap: 20px;
+	column-rule: 2px solid #333333;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.container article h2 {
+	text-align: center;
+	column-span: all;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+
+.container article p {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.container article h3 {
+	text-align: center;
+	column-span: all;
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+
+.container figure-caption {
+	color: white;
+	font-size: 12px;
+}
+
+.container section {
+	position: relative;
+	float: left;
+	width: 70%;
+	margin: 0 5% 0 0;
+	column-count: 1;
+	column-gap: 20px;
+	column-rule: 2px solid #333333;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.container section h3 {
+	text-align: center;
+	column-span: all;
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+
+table {
+	max-width: 960px;
+	margin: 10px auto;
+}
+
+caption {
+	font-size: 1.6em;
+	font-weight: 400;
+	padding: 10px 0;
+}
+
+thead th {
+	font-weight: 400;
+	background: #8a97a0;
+	color: #FFF;
+}
+
+tr {
+	background: #f4f7f8;
+	border-bottom: 1px solid #FFF;
+	margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+	background: #e8eeef;
+}
+
+th, td {
+	text-align: left;
+	padding: 20px;
+	font-weight: 300;
+}
+
+/* Sidebar Styles */
+
+.container .sidebar {
+	float: right;
+	background-color: #333333;
+	width: 25%;
+	height: auto;
+	text-align: center;
+	padding: 20px;
+}
+
+.container .sidebar h3 {
+	margin: 0 0 20px 0;
+	/* Only the bottom has margin */
+	color: white;
+	font-size: 30px;
+}
+
+.container .sidebar figure {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px 0;
+	padding: 0;
+	outline: 0;
+	border: 1px solid #888888;
+}
+
+.container .sidebar figure img {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+/* Footer Styles */
+
+footer h4 {
+	font-size: 26px;
+}
+
+footer nav ul li a {
+	color: white;
+}

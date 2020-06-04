@@ -1,0 +1,19 @@
+/* Print Stylesheet */
+
+body {
+    background-color: none;
+    background: none;
+    color: black;
+	font-family: sans-serif;
+}
+
+.sidebar, footer {
+	display: none;
+	visibility: hidden;
+}
+
+div.container article {
+	column-count: 2;
+	width: 100%;
+	margin: 0;
+}

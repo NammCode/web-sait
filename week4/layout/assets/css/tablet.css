@@ -1,0 +1,13 @@
+/* Tablet Stylesheet */
+
+.container article {
+	column-count: 2;
+}
+
+.container blockquote::before {
+	display: none;
+	visibility: hidden;
+}
+.container blockquote p {
+	width: 100%;
+}
