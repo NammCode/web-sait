@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Page title -->
+	<title>Western Form</title>
+
+	<!-- Information about my page-->
+	<meta name="author" content="Nam">
+	<meta name="description" content="This page is cover page">
+
+	<!-- Libraries / Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+
+	<!-- My Stylesheets -->
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<img class="bg-image" src="assets/images/background.jpg" alt="Western Form">
+
+	<header>
+		<div>
+			<img src="assets/images/spring_logo.png" alt="Spring Logo" title="My Logo">
+		</div>
+		<h1>Start Up Company</h1>
+	</header>
+
+	<div class="container">
+		<form action="applications@wcf.ab.ca" method="POST">
+
+			<h2>Western Cascade Finance</h2>
+
+			<div>
+				<label for="regDate">Current Date</label>
+				<input type="date" name="regDate" value="2020-06-11">
+			</div>
+
+			<div>
+				<label for="firstName">First Name:</label>
+				<input type="text" name="firstName" maxlength="32" pattern="[A-Za-z]{1,32}"><br>
+				<label for="lastName">Last Name:</label>
+				<input type="text" name="lastName" maxlength="32" pattern="[A-Za-z]{1,32}">
+			</div>
+
+			<div class="address-section">
+				<label for="regCountry">Country: </label>
+				<input type="text" name="regCountry" value="Canada" disabled="true"><br>
+				<label for="regCity">City: </label>
+				<input type="text" name="regCity"><br>
+				<label for="regAddress2">Street Address: </label>
+				<input type="text" name="regAddress2"><br>
+				<label for="regPostalCode">Postal Code: </label>
+				<input type="text" name="regPostalCode" pattern="[0-9]*"><br>
+			</div>
+
+			<div>
+				<label for="regPhone">Phone Number</label>
+				<label for="business"><input id="business" type="radio" name="typePhone"
+						value="business">Business</label>
+				<label for="personal"><input id="personal" type="radio" name="typePhone"
+						value="personal">Personal</label>
+				<input type="tel" name="regPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+					placeholder="Example: 825-365-8664">
+			</div>
+
+			<div>
+				<label for="regEmail">Email: </label>
+				<input type="email" name="regEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+					placeholder="example@email.com">
+			</div>
+
+			<div>
+				<label for="regPhone">Are you current clients? (Yes or No)</label>
+				<label for="yes"><input id="yes" type="radio" name="areClient" value="yes">Yes</label>
+				<label for="no"><input id="no" type="radio" name="areClient" value="no">No</label>
+			</div>
+
+			<div>
+				<label for="regPhone">What is your gender? (Male or Female)</label>
+				<label for="male"><input id="male" type="radio" name="gender" value="male">Male</label>
+				<label for="female"><input id="female" type="radio" name="gender" value="female">Female</label>
+			</div>
+
+			<div>
+				<label for="regAge">What is your Age? (Min 18)</label>
+				<input type="number" id="regAge" name="regAge" min="18">
+			</div>
+
+			<div>
+				<label for="regPhone">Own or Rent home? (Own or Rent)</label>
+				<label for="own"><input id="own" type="radio" name="typeClient" value="own">Own</label>
+				<label for="rent"><input id="rent" type="radio" name="typeClient" value="rent">Rent</label>
+			</div>
+
+			<div>
+				<label for="regIncome">Annual Gross Income</label>
+				<input type="number" id="regIncome" name="regIncome" min="0">
+			</div>
+
+			<div>
+				<label for="">Check Boxes if you own any: </label><br>
+				<label for="vehicle"><input id="vehicle" type="checkbox" name="any" value="vehicle">Vehicle</label>
+				<label for="rrsp"><input id="rrsp" type="checkbox" name="any" value="rrsp">RRSP</label>
+				<label for="tfsa"><input id="tfsa" type="checkbox" name="any" value="tfsa">TFSA</label>
+				<label for="rrif"><input id="rrif" type="checkbox" name="any" value="rrif">RRIF</label>
+			</div>
+
+			<div class="button-bar">
+				<input type="submit" name="submit" value="Submit Form">
+				<input type="reset" name="reset" value="Clear Form">
+			</div>
+
+		</form>
+
+	</div>
+
+</div>
+
+
+
+</body>
+
+</html>

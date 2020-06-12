@@ -1,0 +1,167 @@
+/* Styles for the border box model (optional) */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Reset Styles */
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	background-image: url('../images/background-image.jpg');
+	background-size: 75% auto;
+}
+
+
+/* Shared Styles */
+header, footer {
+	background-color: #333333;
+	color: white;
+	padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+}
+
+
+/* Header Styles */
+header {
+	text-align: center;
+}
+header h1 {
+	font-size: 50px;
+	font-weight: bolder;
+}
+
+/* Container Styles */
+.container {
+	position: relative;
+	width: 80%;
+	margin-top: 30px;
+	margin-right: 5%;
+	margin-bottom: 40px;
+	margin-left: 10%;
+}
+.clearfix:after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+/* Article Styles */
+.container article {
+	position: relative;
+	float: left;
+	width: 70%;
+	margin: 0 5% 0 0;
+	column-count: 2;
+	column-gap: 20px;
+	column-rule: 2px solid #333333;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 400;
+}
+.container article h2 {
+	text-align: center;
+	column-span: all;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+.container article p {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.container p::first-letter {
+    color: #333333;
+    font-size: 40px;
+	float: left;
+	font-weight: 600;
+    line-height: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Article Block Quote Style */
+.container blockquote {
+	display: inline-block;
+	position: relative;
+	clear: both;
+	width: 70%;
+	margin: 40px 0 0 0;
+	padding: 20px;
+	border: 0;
+	background-color: #333333;
+	color: white;
+	border-radius: 20px;
+}
+
+.container blockquote p {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 90%;
+	margin: 0 0 0 0;
+	font-size: 20px;
+	text-align: left;
+}
+
+
+
+/* Sidebar Styles */
+.container .sidebar {
+	float: right;
+	background-color: #333333;
+	width: 25%;
+	height: auto;
+	text-align: center;
+	padding: 20px;
+}
+.container .sidebar h3 {
+	margin: 0 0 20px 0; /* Only the bottom has margin */
+	color: white;
+	font-size: 30px;
+}
+.container .sidebar figure {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px 0;
+	padding: 0;
+	outline: 0;
+	border: 1px solid #888888;
+}
+.container .sidebar figure img {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+
+.container .sidebar figure:hover {
+	animation-name: bigger;
+	animation-duration: 2s;
+}
+
+@keyframes bigger {
+	0% {
+		width: 100%;
+	}
+	100% {
+		width: 125%;;
+	}
+}
+
+/* Footer Styles */
+footer h4 {
+	font-size: 26px;
+}
+footer nav ul li a {
+	color: white;
+}
+
+
+
