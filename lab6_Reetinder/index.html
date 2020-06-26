@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> Conversion Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Conversion Calculator</h1>
+    </header>
+
+    <div class="container">
+        <div class="convert">
+
+            <h2>Convert from centimeters to inches </h2>
+            <p>Centimeters</p>
+            <input type="number" name="centimeters" id="centimeters" onchange="convertFromCentimeters(this.value)"
+                value="0" class="convert" />
+            <p>Inches</p>
+            <input type="number" name="inches" id="inches" onchange="convertFromInches(this.value)" value="0"
+                class="convert" />
+
+        </div>
+
+        <div class="convert">
+
+            <h2>Convert from gallons to litres </h2>
+            <p>Gallons</p>
+            <input type="number" name="gallons" id="gallons" onchange="convertFromGallons(this.value)" value="0"
+                class="convert" />
+            <p>Litres</p>
+            <input type="number" name="litres" id="litres" onchange="convertFromLitres(this.value)" value="0"
+                class="convert" />
+
+        </div>
+
+        <div class="convert">
+
+            <h2>Convert meters to feet </h2>
+            <p>Meters</p>
+            <input type="number" name="meters" id="meters" onchange="convertFromMeter(this.value)" value="0"
+                class="convert" />
+            <p>Feet</p>
+            <input type="number" name="feet" id="feet" onchange="convertFromFeet(this.value)" value="0"
+                class="convert" />
+
+        </div>
+
+        <div class="convert">
+
+            <h2>Convert from square feet to square meters </h2>
+            <p>Square Feet</p>
+            <input type="number" name="sqfeet" id="sqfeet" onchange="convertFromSqfeet(this.value)" value="0"
+                class="convert" />
+            <p>Square Meter</p>
+            <input type="number" name="sqmeter" id="sqmeter" onchange="convertFromSqmeter(this.value)" value="0"
+                class="convert" />
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="assets/scripts/lab6.js"></script>
+</body>
+
+</html>
