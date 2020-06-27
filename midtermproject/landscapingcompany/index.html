@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Page title -->
+    <title>Lanscaping Company</title>
+
+    <meta name="author" content="Nam">
+    <meta name="description" content="This page is all about Lanscaping.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="assets/images/spring_logo.png" alt="Spring Logo" title="My Logo">
+        </div>
+        <h1>Landscaping Company</h1>
+    </header>
+
+    <form method="dialog" onSubmit="displayOrder();" class="container">
+
+        <h2>Order Form</h2>
+
+        <div>
+            <h3>Customer Information</h3>
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,32}" required autofocus>
+
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,32}" required>
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" required>
+
+            <label for="postalCode">Postal Code</label>
+            <input type="text" name="postalCode" id="postalCode" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+             required>
+
+            <label for="phone">Phone number</label>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]+" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" required>
+        </div>
+
+        <div>
+            <h3>Select Shape of Planters</h3>
+
+            <select name="planterType" id="planterType" onchange="displayDimension();">
+                <option value="Square/Rectangular Cubes">Square/Rectangular Cubes</option>
+                <option value="Flat bottomed cylinders">Flat bottomed cylinders</option>
+                <option value="½ Spherical">½ Spherical</option>
+                <option value="Truncated cone">Truncated cone</option>
+            </select>
+        </div>
+
+        <div>
+            <h3>Fill Dimension of Planters</h3>
+
+            <label class="lengthClass" for="length">Length</label>
+            <input class="lengthClass" type="number" pattern="[0-9]+" name="length" id="length">
+
+            <label class="widthClass" for="width">Width</label>
+            <input class="widthClass" type="number" pattern="[0-9]+" name="width" id="width">
+
+            <label class="heightCLass" for="height">Height</label>
+            <input class="heightCLass" type="number" pattern="[0-9]+" name="height" id="height">
+
+            <label class="radius1Class" for="radius1" style="display: none;">Radius</label>
+            <input class="radius1Class" type="number" pattern="[0-9]+" name="radius1" id="radius1" style="display: none;">
+
+            <label class="radius2Class" for="radius2" style="display: none;">Radius</label>
+            <input class="radius2Class" type="number" pattern="[0-9]+" name="radius2" id="radius2" style="display: none;">
+        </div>
+
+        <div class="button">
+            <input name="Submit" type="submit" value="Submit Form"></input>
+        </div>
+
+    </form>
+
+    <section id="displayOrder">
+    </section>
+
+
+
+    <footer>
+        <div class="footer-left">
+            <div>
+                <img width="100px" src="assets/images/spring_logo.png" alt="Spring Logo" title="My Logo">
+            </div>
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">Pricing</a>
+                <a href="#">About</a>
+                <a href="#">Faq</a>
+                <a href="#">Contact</a>
+            </p>
+            <p class="footer-company-name">Landscaping Company © 2015</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <p><span>136 Franklin</span>Chinook, Calgary</p>
+            </div>
+            <div>
+                <p>+1.825.365.8664</p>
+            </div>
+            <div>
+                <p><a href="mailto:support@company.com">namkhanh.nguyen@sait.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/slides.js"></script>
+</body>
+
+</html>

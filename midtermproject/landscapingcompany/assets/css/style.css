@@ -14,8 +14,7 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-image: url('../images/love.jpg');
-    background-size: 50% auto;
-    backgroung-op
+    background-size: 100% auto;
 }
 
 /* Shared Styles */
@@ -26,7 +25,7 @@ header, footer {
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     margin: 0;
     font-family: 'Lobster', cursive;
     font-weight: 400;
@@ -44,6 +43,7 @@ header h1 {
 header {
     text-align: center;
     display: block;
+    margin-bottom: 20px;
 }
 
 header div {
@@ -68,20 +68,27 @@ img {
 .container {
     position: relative;
     width: 80%;
-    margin-top: 30px;
-    margin-right: 5%;
-    margin-bottom: 40px;
-    margin-left: 20%;
+    margin: 0 auto;
+    text-align: center;
 }
 
-#text {
-    color: #f2f2f2;
-    font-size: 26px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    font-weight: 500;
+.container div {
+    margin: 20px 0 20px 0;
+    padding-bottom: 20px;
+}
+
+.container div label {
+    display: block;
+}
+
+.container .button {
+    border: none;
+}
+
+#displayOrder {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
 }
 

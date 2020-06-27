@@ -1,0 +1,122 @@
+/* Styles for the border box model (optional) */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Reset Styles */
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-image: url('../images/love.jpg');
+    background-size: 100% auto;
+}
+
+/* Shared Styles */
+
+header, footer {
+    background-color: #666;
+    color: white;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+}
+
+/* Header Styles */
+
+header h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    margin: auto;
+    text-shadow: 2px 2px #FF0000;
+}
+
+header {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+header div {
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+header div img {
+    display: block;
+    width: 100%;
+}
+
+/* Container Styles */
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container div {
+    display: block;
+    border: 4px solid black;
+    padding-bottom: 20px;
+    text-align: center;
+    color: black;
+    position: relative;
+    align-content: baseline;
+}
+
+table {
+    margin-top: 5em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+caption {
+    font-size: 1.3em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+th {
+    padding: 10px 15px;
+    text-transform: capitalize;
+}
+
+td {
+    padding: 10px 15px;
+    font-size: 2em;
+}
+
+td input, select {
+    font-size: 0.8em;
+}
+
+thead {
+    background: #669999;
+    color: rgb(209, 224, 224);
+    font-size: 2em;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(102, 153, 153, 0.2);
+}
+
+tfoot tr:first-child td {
+    /*background: rgba(102,153,153,0.2);*/
+    border-bottom: 3px solid #669999;
+}
+
