@@ -6,7 +6,7 @@ window.onload = showSlides;
 //global variables
 
 var myPix = new Array("assets/images/bike.jpg", "assets/images/coding.jpg", "assets/images/piano.jpg", 
-"assets/images/coffeBeautiful.jpg", "assets/images/coffecup.jpg", "assets/images/coffeEat.jpg", "assets/images/coffeFlower.jpg", "assets/images/coffeSeed.jpg");
+"assets/images/coffeBeautiful.jpg", "assets/images/coffecup.jpg", "assets/images/coffeEat.jpg", "assets/images/coffeflower.jpg", "assets/images/coffeSeed.jpg");
 var figure = new Array("Bike", "Coding", "Learning Piano", "Beautiful Coffe", "Cup Of Coffee", "Eating Coffee", "Flower Coffee", "Seed Coffee");
 var thisPic = 0;
 
