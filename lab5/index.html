@@ -15,7 +15,7 @@
         <p id="currentDate"></p>
     </header>
 
-    <form>
+    <form method="POST" action="">
         <div>
             <h3>Customer Information</h3>
 
@@ -37,17 +37,18 @@
             <h3>Select Pizza</h3>
 
             <label>
-                <input type="radio" name="pizzaType[]">
+                <img src="assets/images/pizza.jpg" alt="Pizza">
+                <input type="radio" name="pizzaType" value="Extra Meaty">
                 <span>Extra Meaty</span>
             </label>
 
             <label>
-                <input type="radio" name="pizzaType[]">
+                <input type="radio" name="pizzaType" value="Really Veggy">
                 <span>Really Veggy</span>
             </label>
 
             <label>
-                <input type="radio" name="pizzaType[]">
+                <input type="radio" name="pizzaType" value="Super Cheesy">
                 <span>Super Cheesy</span>
             </label>
 
@@ -57,35 +58,35 @@
                 <option value="Small">Small</option>
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
-                <option value="xLarge">ExtraLarge</option>
+                <option value="Extra Large">Extra Large</option>
             </select>
 
             <h3># of Pizza's</h3>
-            <input type="number" min="0" value="0" name="pizzaCount">
+            <input type="number" min="0" value="0" id="pizzaCount" name="pizzaCount">
 
             <h3>Pizza Toppings</h3>
             <label>
-                <input type="checkbox" name="pizzaToppings">
+                <input type="checkbox" value="Extra Cheese" name="pizzaToppings">
                 <span>Extra Cheese</span>
             </label>
 
             <label>
-                <input type="checkbox" name="pizzaToppings">
+                <input type="checkbox" value="Pepperoni" name="pizzaToppings">
                 <span>Pepperoni</span>
             </label>
 
             <label>
-                <input type="checkbox" name="pizzaToppings">
+                <input type="checkbox" value="Mushrooms" name="pizzaToppings">
                 <span>Mushrooms</span>
             </label>
 
             <label>
-                <input type="checkbox" name="pizzaToppings">
+                <input type="checkbox" value="Bacon" name="pizzaToppings">
                 <span>Bacon</span>
             </label>
 
             <label>
-                <input type="checkbox" name="pizzaToppings">
+                <input type="checkbox" value="Olives" name="pizzaToppings">
                 <span>Olives</span>
             </label>
         </div>
@@ -95,28 +96,28 @@
             <h3>Select a Sandwich</h3>
 
             <label>
-                <input type="radio" name="sandwichType[]">
+                <input type="radio" name="sandwichType" value="All Garden Vegetarian">
                 <span>All Garden Vegetarian</span>
             </label>
 
             <label>
-                <input type="radio" name="sandwichType[]">
+                <input type="radio" name="sandwichType" value="Big Beef on a Bun">
                 <span>Big Beef on a Bun</span>
             </label>
 
             <label>
-                <input type="radio" name="sandwichType[]">
+                <input type="radio" name="sandwichType" value="Mixed Grill">
                 <span>Mixed Grill</span>
             </label>
 
             <label>
-                <input type="radio" name="sandwichType[]">
+                <input type="radio" name="sandwichType" value="Grilled Pork">
                 <span>Grilled Pork</span>
             </label>
 
 
             <h3># of Sandwiches</h3>
-            <input type="number" min="0" value="0" name="sandwichCount">
+            <input type="number" min="0" value="0" id="sandwichCount" name="sandwichCount">
 
         </div>
 
@@ -125,22 +126,22 @@
             <h3>Select Drink</h3>
 
             <label>
-                <input type="radio" name="drinkType[]" value="Cola">
+                <input type="radio" name="drinkType" value="Cola">
                 <span>Cola</span>
             </label>
 
             <label>
-                <input type="radio" name="drinkType[]" value="Orange">
+                <input type="radio" name="drinkType" value="Orange">
                 <span>Orange</span>
             </label>
 
             <label>
-                <input type="radio" name="drinkType[]" value="Lemon">
+                <input type="radio" name="drinkType" value="Lemon">
                 <span>Lemon</span>
             </label>
 
             <label>
-                <input type="radio" name="drinkType[]" value="Root Beer">
+                <input type="radio" name="drinkType" value="Root Beer">
                 <span>Root Beer</span>
             </label>
 
@@ -154,13 +155,15 @@
 
 
             <h3># of Drinks</h3>
-            <input type="number" min="0" value="0" name="drinkCount">
+            <input type="number" min="0" value="0" id="drinkCount" name="drinkCount">
         </div>
+
     </form>
 
     <div>
         <button onclick="calcOrder();">Calculate Order</button>
     </div>
+
 
     <section id="displayOrder">
 

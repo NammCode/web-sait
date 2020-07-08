@@ -1,94 +1,111 @@
-window.onload = dispOrder;
+window.onload = initialize;
 
 function initialize() {
     var todayDate = new Date();
-    document.getElementById('currentDate').innerHTML = todaysDate;
+    document.getElementById('currentDate').innerHTML = todayDate;
 }
 
 function calcOrder() {
+    var pizzaType, pizzaSize, numOfPizza, sandwichType, numOfSand,
+        drinkType, drinkSize, numOfDrink;
+    var pizzaToppings = [];
+    var orders = '';
+    var pizzaCost, sandCost, drinkCost, toppingCost = 0;
+    pizzaType = document.querySelector('input[name="pizzaType"]:checked').value;
+    numOfPizza = document.getElementById('pizzaCount').value;
+    pizzaSize = document.getElementById('pizzaSize').value;
 
-
-var pizzaType, pizzaSize, pizzaCount, pizzaCost, pizzaToppings;
-var toppingCost = 0;
-var toppingArray = [];
-var pizza = {};
-
-pizzaType = document.querySelector('form div input[name="pizzaType[]"]:checked').value;
-
-pizzaSize = document.getElementById('pizzaSize').value;
-
-
-switch (pizzaSize) {
-    case 'Small':
-        pizzaCost = 8.50
-        break;
-    case 'Medium':
-        pizzaCost = 11.50
-        break;
-    case 'Large':
-        pizzaCost = 14.00
-        break;
-    case 'XLarge':
-        pizzaCost = 16.50
-        break;
-    default: 
-        pizzaCost = 0.00
-        break;
-
-
-}
-
-pizzaCount = document.getElementById('pizzaCount').value;
-
-toppingCost = document.getElementById('pizzaToppings[]');
-
-
-for (var pt = 0; pt < pizzaToppings.length; pt++){
-
-    if (pizzaToppings[pt].checked == true) {
-    toppingCost += 1.75;
-    toppingArray.push(pizzaToppings[pt].value)
+    var checkboxs = document.querySelectorAll('input[name="pizzaToppings"]:checked');
+    for (var i = 0; i < checkboxs.length; i++) {
+        pizzaToppings.push(checkboxs[i].value);
     }
-    
 
+    switch (pizzaSize) {
+        case 'Small':
+            pizzaCost = 8.5;
+            break;
+        case 'Medium':
+            pizzaCost = 11.5;
+            break;
+        case 'Large':
+            pizzaCost = 14;
+            break;
+        case 'Extra Large':
+            pizzaCost = 16.5;
+            break;
+        default:
+            pizzaCost = 0;
+    }
+    pizzaCost *= numOfPizza;
+
+    sandwichType = document.querySelector('input[name="sandwichType"]:checked').value;
+    numOfSand = document.getElementById('sandwichCount').value;
+
+    switch (sandwichType) {
+        case 'All Garden Vegetarian':
+            sandCost = 7.5;
+            break;
+        case 'Big Beef on a Bun':
+            sandCost = 8.5;
+            break;
+        case 'Mixed Grill':
+            sandCost = 9.5;
+            break;
+        case 'Grilled Pork':
+            sandCost = 9.5;
+            break;
+        default:
+            sandCost = 0;
+    }
+    sandCost *= numOfSand;
+
+    drinkType = document.querySelector('input[name="drinkType"]:checked').value;
+    drinkSize = document.getElementById('drinkSize').value;
+    numOfDrink = document.getElementById('drinkCount').value;
+
+    switch (drinkSize) {
+        case 'Small':
+            drinkCost = 1.25;
+            break;
+        case 'Medium':
+            drinkCost = 1.75;
+            break;
+        case 'Large':
+            drinkCost = 2;
+            break;
+        default:
+            drinkCost = 0;
+    }
+    drinkCost *= numOfDrink;
+
+    orders += '<p>' + numOfPizza + ' ' + pizzaSize + ' ' + pizzaType + ' Pizza $' + pizzaCost + '</p>';
+    orders += '<p>Extra: ';
+    for (var i = 0; i < pizzaToppings.length; i++) {
+        orders += pizzaToppings[i] + ' ';
+        toppingCost += 1.75;
+    }
+    orders += '$' + toppingCost + '</p>';
+    orders += '<p>' + numOfSand + ' ' + sandwichType + ' Sandwiches $' + sandCost + '</p>';
+    orders += '<p>' + numOfDrink + ' ' + drinkSize + ' ' + drinkType + ' $' + drinkCost + '</p>';
+
+    displayOrder(orders);
 }
-console.log(toppingArray);
 
-pizzaCost = pizzaCost * pizzaCount;
-
-
-pizzaCost = (pizzaCost + toppingCost) * pizzaCount;
-
-pizza.cost = pizzaCost;
-pizza.type = pizzaType;
-pizza.size = pizzaSize;
-pizza.quantity = pizzaCount;
-
-dispOrder(pizza);
-
-}
-
-function dispOrder(pizza) {
-    var fName, lName, address, phone;
+function displayOrder(orders) {
+    var fName, lName, address, phoneNumber;
     var receipt = '';
 
     fName = document.getElementById('firstName').value;
     lName = document.getElementById('lastName').value;
     address = document.getElementById('address').value;
-    phone = document.getElementById('phone').value;
+    phoneNumber = document.getElementById('phone').value;
 
     receipt += '<h4>Customer Order</h4>';
-    receipt += '<p><strong>Full Name: </strong> ' + fName + ' ' + lName + '</p>';
-    receipt += '<p><strong>Address: </strong> ' + address + '</p>';
-    receipt += '<p><strong>Phone #: </strong> ' + phone + '</p>';
+    receipt += '<p><b>Full Name: </b>' + fName + ' ' + lName + '</p>';
+    receipt += '<p><b>Address: </b>' + address + '</p>';
+    receipt += '<p><b>Phone Number: </b>' + phoneNumber + '</p>';
     receipt += '<h4>Order Details</h4>';
-    receipt += pizza.quantity + ' ' + pizza.size + ' ' + pizza.type + ' ' + pizza.cost;
-    receipt += '<ul>'
-    for (var pt = 0; pt < 5; pt++){
-        receipt += '<li>' + pizza.toppings[pt] + '</li>';
-    }
-    receipt += '</ul>;'
-
+    receipt += orders;
 
     document.getElementById('displayOrder').innerHTML = receipt;
 }
