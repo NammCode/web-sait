@@ -15,7 +15,7 @@
         <p id="currentDate"></p>
     </header>
 
-    <form method="POST" action="">
+    <form method="dialog" action="">
         <div>
             <h3>Customer Information</h3>
 
@@ -38,17 +38,17 @@
 
             <label>
                 <img src="assets/images/pizza.jpg" alt="Pizza">
-                <input type="radio" name="pizzaType" value="Extra Meaty">
+                <input type="radio" name="pizzaType" id="meaty" value="Extra Meaty">
                 <span>Extra Meaty</span>
             </label>
 
             <label>
-                <input type="radio" name="pizzaType" value="Really Veggy">
+                <input type="radio" name="pizzaType" id="veggy" value="Really Veggy">
                 <span>Really Veggy</span>
             </label>
 
             <label>
-                <input type="radio" name="pizzaType" value="Super Cheesy">
+                <input type="radio" name="pizzaType" id="chessy" value="Super Cheesy">
                 <span>Super Cheesy</span>
             </label>
 
@@ -66,27 +66,27 @@
 
             <h3>Pizza Toppings</h3>
             <label>
-                <input type="checkbox" value="Extra Cheese" name="pizzaToppings">
+                <input type="checkbox" value="Extra Cheese" id="cheese" name="pizzaToppings">
                 <span>Extra Cheese</span>
             </label>
 
             <label>
-                <input type="checkbox" value="Pepperoni" name="pizzaToppings">
+                <input type="checkbox" value="Pepperoni" id="pepper" name="pizzaToppings">
                 <span>Pepperoni</span>
             </label>
 
             <label>
-                <input type="checkbox" value="Mushrooms" name="pizzaToppings">
+                <input type="checkbox" value="Mushrooms" id="mush" name="pizzaToppings">
                 <span>Mushrooms</span>
             </label>
 
             <label>
-                <input type="checkbox" value="Bacon" name="pizzaToppings">
+                <input type="checkbox" value="Bacon" id="bacon" name="pizzaToppings">
                 <span>Bacon</span>
             </label>
 
             <label>
-                <input type="checkbox" value="Olives" name="pizzaToppings">
+                <input type="checkbox" value="Olives" id="olives" name="pizzaToppings">
                 <span>Olives</span>
             </label>
         </div>
@@ -96,22 +96,22 @@
             <h3>Select a Sandwich</h3>
 
             <label>
-                <input type="radio" name="sandwichType" value="All Garden Vegetarian">
+                <input type="radio" name="sandwichType" id="garden" value="All Garden Vegetarian">
                 <span>All Garden Vegetarian</span>
             </label>
 
             <label>
-                <input type="radio" name="sandwichType" value="Big Beef on a Bun">
+                <input type="radio" name="sandwichType" id="beef" value="Big Beef on a Bun">
                 <span>Big Beef on a Bun</span>
             </label>
 
             <label>
-                <input type="radio" name="sandwichType" value="Mixed Grill">
+                <input type="radio" name="sandwichType" id="grill" value="Mixed Grill">
                 <span>Mixed Grill</span>
             </label>
 
             <label>
-                <input type="radio" name="sandwichType" value="Grilled Pork">
+                <input type="radio" name="sandwichType" id="pork" value="Grilled Pork">
                 <span>Grilled Pork</span>
             </label>
 
@@ -126,22 +126,22 @@
             <h3>Select Drink</h3>
 
             <label>
-                <input type="radio" name="drinkType" value="Cola">
+                <input type="radio" name="drinkType" id="cola" value="Cola">
                 <span>Cola</span>
             </label>
 
             <label>
-                <input type="radio" name="drinkType" value="Orange">
+                <input type="radio" name="drinkType" id="orange" value="Orange">
                 <span>Orange</span>
             </label>
 
             <label>
-                <input type="radio" name="drinkType" value="Lemon">
+                <input type="radio" name="drinkType" id="lemon" value="Lemon">
                 <span>Lemon</span>
             </label>
 
             <label>
-                <input type="radio" name="drinkType" value="Root Beer">
+                <input type="radio" name="drinkType" id="rootbeer" value="Root Beer">
                 <span>Root Beer</span>
             </label>
 
@@ -160,8 +160,11 @@
 
     </form>
 
-    <div>
-        <button onclick="calcOrder();">Calculate Order</button>
+    <div class="btn">
+        <button onclick="calcOrder();" id="calOrder">Calculate Order</button><br>
+        <button onclick="newOrder();" id="newOrder" disabled>New Order</button><br>
+        <button onclick="updateInfo();" id="updateInfo" disabled>Update Order</button>
+        <button onclick="saveInfo();" id="saveInfo" style="display: none;">Save Update</button>
     </div>
 
 

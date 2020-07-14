@@ -1,0 +1,34 @@
+﻿html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body
+{
+    font-family: 'Staatliches', cursive;
+    width: 100%;
+    font-size: 1em;
+}
+.container{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    text-align:center;
+    padding: 40px;
+}
+
+body div {
+    display: block;
+    border: 4px solid black;
+    padding-bottom:20px;
+    text-align:center;
+    color: black;
+    position:relative;
+    align-content: baseline;
+}

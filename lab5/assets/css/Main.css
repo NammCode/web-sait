@@ -36,3 +36,8 @@ form div input {
 form div input[name='pizzaType[]']:checked+span {
   background-color: green;
 }
+
+.btn button {
+  text-align: center;
+  margin: 5px;
+}
