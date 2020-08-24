@@ -17,8 +17,6 @@ customer.order = {
     orderCost: 0
 };
 
-
-
 function initialize() {
     var todayDate = new Date();
     document.getElementById('currentDate').innerHTML = todayDate;
@@ -29,7 +27,7 @@ function getOrder() {
     var pizza = {
         pizzaType: '',
         pizzaSize: '',
-        numOfPizza: 3,
+        numOfPizza: 0,
         pizzaToppings: [],
         pizzaCost: 0
     };
@@ -118,100 +116,6 @@ function getOrder() {
     customer.order.drinks.push(drink);
 }
 
-function calcOrder() {
-
-    document.getElementById('calOrder').disabled = true;
-    document.getElementById('newOrder').disabled = false;
-    document.getElementById('updateInfo').disabled = false;
-    getOrder();
-    disable();
-    displayOrder();
-}
-
-function disable() {
-
-    document.getElementById('firstName').disabled = true;
-    document.getElementById('lastName').disabled = true;
-    document.getElementById('address').disabled = true;
-    document.getElementById('phone').disabled = true;
-    document.getElementById('meaty').disabled = true;
-    document.getElementById('veggy').disabled = true;
-    document.getElementById('chessy').disabled = true;
-    document.getElementById('pizzaSize').disabled = true;
-    document.getElementById('cheese').disabled = true;
-    document.getElementById('pepper').disabled = true;
-    document.getElementById('mush').disabled = true;
-    document.getElementById('bacon').disabled = true;
-    document.getElementById('olives').disabled = true;
-    document.getElementById('pizzaCount').disabled = true;
-    document.getElementById('garden').disabled = true;
-    document.getElementById('beef').disabled = true;
-    document.getElementById('grill').disabled = true;
-    document.getElementById('pork').disabled = true;
-    document.getElementById('sandwichCount').disabled = true;
-    document.getElementById('cola').disabled = true;
-    document.getElementById('orange').disabled = true;
-    document.getElementById('lemon').disabled = true;
-    document.getElementById('rootbeer').disabled = true;
-    document.getElementById('drinkSize').disabled = true;
-    document.getElementById('drinkCount').disabled = true;
-
-}
-
-function refresh() {
-    document.getElementById('meaty').checked = false;
-    document.getElementById('veggy').checked = false;
-    document.getElementById('chessy').checked = false;
-    document.getElementById('pizzaSize').value = "";
-    document.getElementById('cheese').checked = false;
-    document.getElementById('pepper').checked = false;
-    document.getElementById('mush').checked = false;
-    document.getElementById('bacon').checked = false;
-    document.getElementById('olives').checked = false;
-    document.getElementById('pizzaCount').value = 0;
-    document.getElementById('garden').checked = false;
-    document.getElementById('beef').checked = false;
-    document.getElementById('grill').checked = false;
-    document.getElementById('pork').checked = false;
-    document.getElementById('sandwichCount').value = 0;
-    document.getElementById('cola').checked = false;
-    document.getElementById('orange').checked = false;
-    document.getElementById('lemon').checked = false;
-    document.getElementById('rootbeer').checked = false;
-    document.getElementById('drinkSize').value = "";
-    document.getElementById('drinkCount').value = 0;
-}
-
-function active() {
-
-    document.getElementById('firstName').disabled = false;
-    document.getElementById('lastName').disabled = false;
-    document.getElementById('address').disabled = false;
-    document.getElementById('phone').disabled = false;
-    document.getElementById('meaty').disabled = false;
-    document.getElementById('veggy').disabled = false;
-    document.getElementById('chessy').disabled = false;
-    document.getElementById('pizzaSize').disabled = false;
-    document.getElementById('cheese').disabled = false;
-    document.getElementById('pepper').disabled = false;
-    document.getElementById('mush').disabled = false;
-    document.getElementById('bacon').disabled = false;
-    document.getElementById('olives').disabled = false;
-    document.getElementById('pizzaCount').disabled = false;
-    document.getElementById('garden').disabled = false;
-    document.getElementById('beef').disabled = false;
-    document.getElementById('grill').disabled = false;
-    document.getElementById('pork').disabled = false;
-    document.getElementById('sandwichCount').disabled = false;
-    document.getElementById('cola').disabled = false;
-    document.getElementById('orange').disabled = false;
-    document.getElementById('lemon').disabled = false;
-    document.getElementById('rootbeer').disabled = false;
-    document.getElementById('drinkSize').disabled = false;
-    document.getElementById('drinkCount').disabled = false;
-
-}
-
 function displayOrder() {
     var receipt = '';
 
@@ -257,41 +161,8 @@ function displayOrder() {
     document.getElementById('displayOrder').innerHTML = receipt;
 }
 
-function updateOrder(i) {
-
-}
-
-function updateInfo() {
-    document.getElementById('newOrder').disabled = true;
-    document.getElementById('updateInfo').disabled = true;
-    document.getElementById('saveInfo').style.display = "inline";
-    active();
-}
-
-function saveInfo() {
-    document.getElementById('calOrder').disabled = true;
-    document.getElementById('newOrder').disabled = false;
-    document.getElementById('updateInfo').disabled = false;
-    document.getElementById('saveInfo').style.display = "none";
-    customer.order.pizzas.pop();
-    customer.order.sandwichs.pop();
-    customer.order.drinks.pop();
+function calcOrder() {
     getOrder();
-    disable();
     displayOrder();
 }
 
-function newOrder() {
-
-    document.getElementById('calOrder').disabled = false;
-    document.getElementById('newOrder').disabled = true;
-    document.getElementById('updateInfo').disabled = true;
-    //document.getElementById('saveNew').style.display = "inline";
-    active();
-    document.getElementById('firstName').disabled = true;
-    document.getElementById('lastName').disabled = true;
-    document.getElementById('address').disabled = true;
-    document.getElementById('phone').disabled = true;
-    refresh();
-
-}
